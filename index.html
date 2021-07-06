@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coinver$or</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <div>
+        <header>
+            <div>
+                <img src="./assets/logo.svg" style="height: 180px; width: 180px;" alt="Logotipo">
+            <h1>
+                COINVER<span style="color: #3072db;">$</span>OR - Conversor de Criptomoedas
+            </h1>
+        </div>
+           
+        </header>
+
+        <div class="container">
+            <div class="content">
+                <div class="main-column">
+                    <div class="cripto-currency">
+                        <label for="value">Digite o valor a ser convertido:</label>
+                        <input type="number" id="valorUsuario" name="value" value=0>
+                        <button id="button-convert" type="button" alt="button">Converter</button> 
+                    </div>
+
+                    <div class="cripto-currency">
+                        <div class="cripto">
+                            <label for="coins">Escolha a moeda de origem:</label>
+                                <select id="coins" name="coins" onchange="verificaOptionsCripto()">
+                                <option value="Bitcoin">Bitcoin (BTC)</option>
+                                <option value="Ehtereum">Ethereum (Ether)</option>
+                                <option value="Litecoin">Litecoin (LTC)</option>
+                                <option value="Ripple">Ripple (XRP)</option>
+                                </select>
+                        </div>
+
+                        <div class="button-currency-invert">
+                            <button id="button-invert" type="button"> <img src="./assets/button-reverse.png" alt="button" height="20px" width="25px" ></button>
+                         
+
+                        </div>
+
+                        <div class="currency">
+                            <label for="coins">Escolha a moeda destino:</label>
+                                <select id="new-coin" name="new-coin" onchange="verificaOptionsMoeda()">
+                                <option value="Real">Real (BRL)</option>
+                                <option value="Dollar">Dólar Americano (USD)</option>
+                                <option value="Euro">Euro (EUR)</option>                           
+                                </select>
+                        </div>                        
+
+           
+                    </div>
+                    <div class="cripto-currency">
+                        <label for="new-value">O resultado é: </label>
+                        <output id="new-value" name="resultado"></output>
+                    </div>
+                                      
+                </div>
+
+                <div class="side-column">                    
+                    <p>
+                        <a href="./bitcoin.html">Bitcoin</a>
+                    </p>
+                    <p>
+                        <a href="./ether.html">Ether</a>
+                    </p>
+                    <p>
+                        <a href="./litecoin.html">Litecoin</a>
+                    </p>  
+                    <p>
+                        <a href="./ripple.html">Ripple</a>
+                    </p>                    
+
+                    <img src="./assets/bitcoin-graph.png" style="height: 200px; width: 300px;" alt="Gráfico de oscilação dos bitcoins">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                Projeto desenvolvido para o curso de Análise e Desenvolvimento de Sistemas - PUC Minas @2021
+            </p>
+        </footer>
+    </div>   
+    <script src="./converter.js"></script>
+</body>
+</html>
